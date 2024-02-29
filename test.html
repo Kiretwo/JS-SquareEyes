@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amiibo List</title>
+</head>
+<body>
+    <h1>All movies</h1>
+    <ul id="movieList">Loading...</ul>
+    
+<script>
+const out = document.querySelector("ul#movieList");
+
+async function fetchData() {
+  try {
+    const api = "https://v2.api.noroff.dev/square-eyes";
+    const response = await fetch(api);
+    if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
+    const data = await response.json();
+    console.log(data);
+    listData(data.data)
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+function listData(list) {
+    // console.log (list);
+
+    document.querySelector("h1").innerHTML += ` (${list.length})`;
+
+    let outString = "";
+    for (let movie of list) {
+        console.log(movie);
+        outString += `
+        <li>
+            <a href="test-detail.html?id=${movie.id}">
+                ${movie['title']}
+            </a>
+        </li>`;
+    }
+    out.innerHTML = outString;
+    
+}
+
+fetchData();
+</script>
+</body>
+</html>
