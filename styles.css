@@ -186,20 +186,48 @@ input[type="checkbox"] {
 }
 
 /* DETAILS PAGE */
-.movie-detail-card {
+#detail-body {
+  display: flex;
+  justify-content: center;
+}
+
+.details-loading {
+  font-family: 'Montserrat';
+}
+
+#movieDetails {
   border: 1px solid #ddd;
   border-radius: 8px;
   margin: 20px;
   padding: 20px;
-  width: 80%;
+  width: 400px;
   background-color: #fff;
 }
 
-.movie-detail-card img {
+#movieDetails img {
   width: 100%;
   border-radius: 4px;
 }
 
+#movieDetails h1 {
+  margin-bottom: 15px;
+}
+
+.movie-detail-text {
+  margin-top: 20px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+  
+}
 
 /* FOOTER */
 

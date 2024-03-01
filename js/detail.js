@@ -14,28 +14,34 @@ console.log(ref);
 
 const listData = (movie) => {
     console.log(movie);
-    //document.title = amiibo.character; 
     document.title = movie.title; 
     let newDiv = `
-        <h1>${movie.title}</h1>
-        <img src="${movie.image.url}" alt="${movie.title}">
+      <img src="${movie.image.url}" alt="${movie.title}">
+      <h1>${movie.title}</h1>
+      <p class="movie-detail-text">${movie.description}</p>
+      <p class="movie-detail-text">Rating: ${movie.rating}</p>
+      <p class="movie-detail-text">Genre: ${movie.genre}</p>
+      <p class="movie-detail-text">Released: ${movie.released}</p>
+      <div class="price-container">
+      <p class="movie-detail-price"><strong>Price: $${movie.price}</strong></p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
     `;
     out.innerHTML = newDiv;
 }
 
-const getAllAmiibos = async () => {
+const movieDetails = async () => {
     const api = `https://v2.api.noroff.dev/square-eyes/${id}`;
     try {
         const response = await fetch(api); 
         if (!response.ok) throw response.statusText;
         const data = await response.json();
-        //console.log (data.amiibo);
         listData(data.data);
     } catch (error) {
         console.error("Error message: "+error);
     }
 }
 
-getAllAmiibos();
+movieDetails();
 
 
