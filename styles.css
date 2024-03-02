@@ -226,10 +226,39 @@ input[type="checkbox"] {
 }
 
 .add-to-cart-btn {
-  
+  padding: 4px 6px;
+  background-color: #e74c3c;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  border-color: #0E1C36;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  transform: scale(1.05);
 }
 
 /* SHOPPING CART */
+#shopping-cart-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#shopping-cart-body h1 {
+  color: white;
+  font-family: 'Montserrat';
+  margin: 20px 0px;
+}
+
+#cart-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  background-color: #fff;
+}
+
 .cart-item {
   border: 1px solid #ddd;
   padding: 10px;
@@ -254,6 +283,66 @@ input[type="checkbox"] {
   margin-top: 10px;
   text-align: right;
 }
+
+#checkout-btn {
+  width: 400px;
+  margin-top: 10px;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+/* CHECKOUT */
+#checkout-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#checkout-body h1 {
+  margin-top: 20px;
+  color: white;
+  font-family: 'Montserrat';
+}
+
+#order-summary-container, #checkout-form{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.order-item {
+  margin: 10px 0px;
+}
+
+#place-order-btn {
+  margin-top: 15px;
+  width: 155px;
+  padding: 2px 0px;
+  cursor: pointer;
+}
+
+/* ORDER CONFIRMATION */
+#order-confirmation-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Montserrat';
+  padding: 20px 0px;
+}
+
+#order-confirmation-body p {
+  margin: 10px 0px;
+}
+
+#continue-shopping {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
 
 /* FOOTER */
 

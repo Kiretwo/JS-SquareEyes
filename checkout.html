@@ -28,21 +28,21 @@
       <a class="shopping-cart" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
   </header>
 
-  <main>
+  <main id="checkout-body">
     <h1>Checkout</h1>
 
     <div id="order-summary-container"></div>
 
     <div id="checkout-container"></div>
     <form id="checkout-form">
-      <!-- Add form fields for shipping information -->
+      
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required></input>
 
-      <button type="submit">Place Order</button>
+      <button type="submit" id="place-order-btn">Place Order</button>
     </form>
   </main>
 

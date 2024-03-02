@@ -4,15 +4,10 @@ export function calculateTotal(cart) {
   }, 0);
 }
 
-
-
-// Function to update cart in localStorage
 export const updateCart = (cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-
-// Function to format a movie for the cart
 export const formatMovieForCart = (movie) => {
   return {
     id: movie.id,
