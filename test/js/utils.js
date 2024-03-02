@@ -18,7 +18,7 @@ export function listData(list, out){
         //console.log(card);
         const id = card.id;
         newDivs += `<div>
-        <button class="favourite" id=${id}>&#x2665;</button>
+        <button class="favourite" id=${id}>Add to Cart</button>
         <img src="${card.image.url}" alt="${card.title}">
         <h2>${card.title}</h2>
         <p>Price: $${card.price}</p>

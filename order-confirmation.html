@@ -13,25 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <script src="js/shopping-cart.js" type="module"></script>
+  <script src="js/order-confirmation.js" type="module"></script>
 </head>
 <body>
   <header>
-    <input type="checkbox" id="menu-checkbox">
-    <label for="menu-checkbox" class="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
-    <a href="index.html"><img class="logo" src="icons-logo/logo.png" alt="logo of square eyes website"></a>
-    <nav>
-      <ul class="nav-links">
-        <li class="header-li-active"><a class="header-link" href="index.html">Home</a></li>
-      </ul>
-    </nav>
-    <a class="shopping-cart" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox" class="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
+      <a href="index.html"><img class="logo" src="icons-logo/logo.png" alt="logo of square eyes website"></a>
+      <nav>
+        <ul class="nav-links">
+          <li class="header-li-active"><a class="header-link" href="index.html">Home</a></li>
+        </ul>
+      </nav>
+      <a class="shopping-cart" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
   </header>
 
   <main>
-    <h1>Shopping Cart</h1>
-    <div id="cart-container"></div>
-    <button id="checkout-btn">Checkout</button>
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your order!</p>
+
+    <!-- Display order details from localStorage or server response -->
+    <div id="order-details"></div>
+    <a href="index.html">return</a>
   </main>
 
   <footer>
